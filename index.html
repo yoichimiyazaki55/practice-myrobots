@@ -2,10 +2,42 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <title>MY ROBOTS 練習ページ</title>
+  <title>MY ROBOTS | お問い合わせテスト</title>
 </head>
 <body>
-  <h1>MY ROBOTS 練習ページ</h1>
-  <p>これは GitHub と Netlify の練習用サイトです。</p>
+  <h1>MY ROBOTS お問い合わせ（テストサイト）</h1>
+  <p>このページは myrobots.jp の問い合わせフォームを準備するためのテスト環境です。</p>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+
+    <p>
+      <label>お名前：<br />
+        <input type="text" name="name" required />
+      </label>
+    </p>
+
+    <p>
+      <label>メールアドレス：<br />
+        <input type="email" name="email" required />
+      </label>
+    </p>
+
+    <p>
+      <label>ご所属・病院名など：<br />
+        <input type="text" name="organization" />
+      </label>
+    </p>
+
+    <p>
+      <label>お問い合わせ内容：<br />
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+    </p>
+
+    <p>
+      <button type="submit">送信する</button>
+    </p>
+  </form>
 </body>
 </html>
